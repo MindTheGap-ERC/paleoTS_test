@@ -2,9 +2,13 @@
 
 Examine paleoTS model selection performance with time series length
 
+## Introduction
+
+Hohmann et al 2023 ([DOI: 10.1101/2023.12.18.572098](https://doi.org/10.1101/2023.12.18.572098)), supplementary code ([DOI: 10.5281/zenodo.10390267](https://doi.org/10.5281/zenodo.10390267)) found unexpected behavior in the model selection performance of the paleoTS package, version 0.5.3 ([CRAN.R-project.org/package=paleoTS](https://CRAN.R-project.org/package=paleoTS)). Here, this behavior is examined using the simulation tools implemented in the paleoTS package.
+
 ## Authors
 
-__Niklas Hohmann__  
+__Niklas Hohmann__ (maintainer)  
 Utrecht University  
 email: n.h.hohmann [at] uu.nl  
 Web page: [www.uu.nl/staff/NHohmann](https://www.uu.nl/staff/NHHohmann)  
@@ -29,14 +33,34 @@ In RStudio, open the file _paleoTS_test.Rproj_. This will open the RProject of t
 renv::restore()
 ```
 
-in RStudios console to install all required dependencies, including `paleoTS` version 0.5.3. Now the environment is set up, and you can run the analysis using
+in RStudios console to install all required dependencies, including `paleoTS` version __0.5.3__. Now the environment is set up, and you can run the analysis using
 
 ```R
 source("code/test.paleots.R")
 ```
 
-(results are already stored under _figs/_), or inspect the code in _code/test.paleots.R_.
+Results of the analysis are already stored in the repository under _figs/_. You can inspect the code in the file _code/test.paleots.R_.
 
 ## License
 
  Apache 2.0, see LICENSE file for full license text.
+
+## Repository structure
+
+* code : folder for code
+  * test.paleots.R : R script examining paleoTS model selection with time series length
+* figs : folder for figures
+  * test_stasis.jpeg : AICc weights under stasis model with increasing time series length
+  * test_urw.jpeg : AICc weights under undirected random walk (URW) model with increasing time series length
+* renv : folder for `renv` package
+* .Rprofile : R session info
+* .gitignore : untracked files
+* LICENSE : Apache 2.0 license text
+* README.md : readme file
+* paleoTS_test.Rproj : RProject file
+* renv.lock : lock file for `renv` package
+
+## Funding information
+
+Funded by the European Union (ERC, MindTheGap, StG project no 101041077). Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Council. Neither the European Union nor the granting authority can be held responsible for them.
+![European Union and European Research Council logos](https://erc.europa.eu/sites/default/files/2023-06/LOGO_ERC-FLAG_FP.png)
