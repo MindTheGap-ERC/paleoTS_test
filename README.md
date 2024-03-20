@@ -1,5 +1,7 @@
 # paleoTS_test
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10843692.svg)](https://doi.org/10.5281/zenodo.10843692)
+
 Examine paleoTS model selection performance with time series length
 
 ## Introduction
@@ -59,6 +61,10 @@ Results of the analysis are already stored in the repository under _figs/_. You 
 * README.md : readme file
 * paleoTS_test.Rproj : RProject file
 * renv.lock : lock file for `renv` package
+
+## Citation
+
+Please use the doi given at the beginning of this document to cite this repository.
 
 ## Funding information
 
