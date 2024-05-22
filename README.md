@@ -6,7 +6,9 @@ Examine paleoTS model selection performance with time series length
 
 ## Introduction
 
-Hohmann et al 2023 ([DOI: 10.1101/2023.12.18.572098](https://doi.org/10.1101/2023.12.18.572098)), supplementary code ([DOI: 10.5281/zenodo.10390267](https://doi.org/10.5281/zenodo.10390267)) found unexpected behavior in the model selection performance of the paleoTS package, version 0.5.3 ([CRAN.R-project.org/package=paleoTS](https://CRAN.R-project.org/package=paleoTS)). Here, this behavior is examined using the simulation tools implemented in the paleoTS package.
+Hohmann et al 2023 ([DOI: 10.1101/2023.12.18.572098](https://doi.org/10.1101/2023.12.18.572098)), supplementary code ([DOI: 10.5281/zenodo.10390267](https://doi.org/10.5281/zenodo.10390267)) found unexpected behavior in the model selection performance of the paleoTS package, version 0.5.3 ([CRAN.R-project.org/package=paleoTS](https://CRAN.R-project.org/package=paleoTS)) when including Ornstein-Uhlenbeck processes in the set of modes of evolution tested for. Here, this behavior is examined using the simulation tools implemented in the paleoTS package.
+
+The code simulates stasis and undirected random walks, and examines how AICc weights for different modes of evolution (stasis, (un)directed random walk) change with time series length.
 
 ## Authors
 
@@ -52,8 +54,10 @@ Results of the analysis are already stored in the repository under _figs/_. You 
 * code : folder for code
   * test.paleots.R : R script examining paleoTS model selection with time series length
 * figs : folder for figures
-  * test_stasis.jpeg : AICc weights under stasis model with increasing time series length
-  * test_urw.jpeg : AICc weights under undirected random walk (URW) model with increasing time series length
+  * test_stasis_with_ou.jpeg : AICc weights under stasis model with increasing time series length, including OU in the tested modes
+  * test_stasis_without_ou.jpeg : AICc weights under stasis model with increasing time series length, not including OU in the tested modes
+  * test_urw_with_ou.jpeg : AICc weights under undirected random walk (URW) model with increasing time series length, including OU in the tested modes
+  * test_urw_without_ou.jpeg : AICc weights under undirected random walk (URW) model with increasing time series length, not including OU in the tested modes
 * renv : folder for `renv` package
 * .Rprofile : R session info
 * .gitignore : untracked files

@@ -20,9 +20,9 @@ set.seed(1) # set seed for reproducibility
 
 #### stasis with test for OU ####
 
-cat("Running stasis simulations \n")
+cat("Running stasis simulations 1/2 \n")
 for (j in 1:9){
-  print(j)
+  cat(paste0("time series length ", ns[j],"\n"))
   for (i in 1:100){
     
     test<-paleoTS::sim.Stasis(ns=ns[j],
@@ -61,9 +61,9 @@ mtext('green = stasis, yellow = OU, blue = URW, red = GRW',side=3)
 dev.off()
 
 #### URW with test for OU #### 
-cat("Running URW simulations \n")
+cat("Running URW simulations 1/2 \n")
 for (j in 1:9){
-  print(j)
+  cat(paste0("time series length ", ns[j],"\n"))
   for (i in 1:100){
     
     test = paleoTS::sim.GRW(ns = ns[j], # time series length
@@ -105,9 +105,9 @@ compile<-array(dim = c(3,100,9))
 
 #### Stasis without test for OU ####
 
-cat("Running stasis simulations \n")
+cat("Running stasis simulations  2/2 \n")
 for (j in 1:9){
-  print(j)
+  cat(paste0("time series length ", ns[j],"\n"))
   for (i in 1:100){
     
     test<-paleoTS::sim.Stasis(ns=ns[j],
@@ -131,7 +131,7 @@ compile.group<-data.frame(
   stringsAsFactors = FALSE
 )
 compile.group$y<-ordered(compile.group$y,levels=c('Stasis','URW','GRW'))
-jpeg("figs/test_stasis.jpeg")
+jpeg("figs/test_stasis_without_ou.jpeg")
 boxplot(x~y+z,data = compile.group,
         col=c('lightgreen','dodgerblue3','firebrick3'),
         xaxt = 'n',
@@ -148,9 +148,9 @@ dev.off()
 
 #### URW without test for OU ####
 
-cat("Running URW simulations \n")
+cat("Running URW simulations 2/2 \n")
 for (j in 1:9){
-  print(j)
+  cat(paste0("time series length ", ns[j],"\n"))
   for (i in 1:100){
     
     test = paleoTS::sim.GRW(ns = ns[j], # time series length
@@ -174,7 +174,7 @@ compile.group<-data.frame(
 )
 compile.group$y<-ordered(compile.group$y,levels=c('Stasis','URW','GRW'))
 
-jpeg("figs/test_urw.jpeg")
+jpeg("figs/test_urw_without_ou.jpeg")
 boxplot(x~y+z,data = compile.group,
         col=c('lightgreen','dodgerblue3','firebrick3'),
         xaxt = 'n',
