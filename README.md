@@ -1,6 +1,6 @@
 # paleoTS_test
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10843692.svg)](https://doi.org/10.5281/zenodo.10843692)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11350840.svg)](https://doi.org/10.5281/zenodo.11350840)
 
 Examine paleoTS model selection performance with time series length
 
@@ -68,7 +68,7 @@ Results of the analysis are already stored in the repository under _figs/_. You 
 
 ## Citation
 
-Please use the doi given at the beginning of this document to cite this repository.
+Hohmann, N., & Hopkins, M. (2024). paleoTS_test: Examine paleoTS model selection performance with time series length (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.11350840
 
 ## Funding information
 
